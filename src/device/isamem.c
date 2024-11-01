@@ -83,6 +83,7 @@
 #include <86box/ui.h>
 #include <86box/plat.h>
 #include <86box/isamem.h>
+#include <86box/extsock.h>
 
 #include "cpu.h"
 
@@ -2073,6 +2074,7 @@ static const struct {
     { &iab_device          },
 #endif /* USE_ISAMEM_IAB */
     { &lotech_device       },
+    { &extsock_device      },
     { NULL                 }
     // clang-format on
 };

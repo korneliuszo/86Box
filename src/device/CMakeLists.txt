@@ -20,6 +20,7 @@ add_library(dev OBJECT
     bugger.c
     cassette.c
     cartridge.c
+    extsock.c
     hasp.c
     hwm.c
     hwm_lm75.c
