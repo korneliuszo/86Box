@@ -23,6 +23,7 @@
 #include <86box/thread.h>
 #include <86box/timer.h>
 #include <86box/pic.h>
+#include <unistd.h>
 #include <extsock_protocol.h>
 
 static const device_config_t extsock_config[] = {
@@ -322,6 +323,7 @@ extsock_close(void *priv)
 	thread_wait(epriv->thread);
 	thread_destroy_event(epriv->syncer);
 	thread_destroy_event(epriv->syncer2);
+	close(epriv->sock); 
 	free(priv);
 }
 
